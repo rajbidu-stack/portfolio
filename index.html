@@ -108,6 +108,24 @@
   .award{background:linear-gradient(135deg,rgba(109,139,255,.15),rgba(162,107,255,.1));border:1px solid rgba(109,139,255,.3);border-radius:16px;padding:18px;margin-top:18px;font-size:.9rem}
   .award .t{font-family:'Sora';font-weight:700;color:var(--accent-3);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 
+  .cert-feature{background:linear-gradient(135deg,rgba(109,139,255,.16),rgba(162,107,255,.1));border:1px solid rgba(109,139,255,.3);border-radius:18px;padding:24px 26px;margin-bottom:18px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .cert-feature .ic{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(109,139,255,.18);border:1px solid rgba(109,139,255,.35);flex-shrink:0}
+  .cert-feature .meta{flex:1;min-width:240px}
+  .cert-feature .plat{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-3);margin-bottom:4px}
+  .cert-feature h4{font-family:'Sora';font-size:1.2rem;margin-bottom:2px}
+  .cert-feature .sub{color:var(--muted);font-size:.85rem}
+  .cert-feature .vbtn{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:600;color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:9px 16px;border-radius:10px;transition:.2s}
+  .cert-feature .vbtn:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--glow)}
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:880px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cert-grid{grid-template-columns:1fr}}
+  .cert{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;transition:.25s}
+  .cert:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .cert .plat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent-3);margin-bottom:7px}
+  .cert h5{font-family:'Sora';font-size:.96rem;font-weight:600;line-height:1.35;margin-bottom:14px;flex:1}
+  .cert .verify{display:inline-flex;align-items:center;gap:5px;font-size:.82rem;font-weight:600;color:var(--accent);align-self:flex-start;transition:.2s}
+  .cert .verify:hover{gap:9px;color:var(--accent-2)}
+
   footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:48px 0;text-align:center;color:var(--muted)}
   footer .cta{margin-bottom:20px}
   footer h2{font-family:'Sora';font-size:1.8rem;margin-bottom:16px;color:var(--txt)}
@@ -122,6 +140,7 @@
   <div class="brand">Rajesh Bindu<span>.</span></div>
   <div class="navlinks">
     <a href="#ai">AI Projects</a>
+    <a href="#certs">Certifications</a>
     <a href="#paypal">PayPal</a>
     <a href="#linkedin">LinkedIn</a>
     <a href="#visa">Visa</a>
@@ -166,7 +185,6 @@
       <h4>AskAnything — AI Q&amp;A Chatbot</h4>
       <p>An LLM-powered question-answering assistant that responds to natural-language queries over a custom knowledge base using retrieval-augmented generation (RAG), prompt engineering, and vector search.</p>
       <div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">Vector search</span><span class="tag">Python</span></div>
-      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
     </div>
 
     <div class="card">
@@ -175,7 +193,6 @@
       <h4>AI Consumer-Finance Assistant</h4>
       <p>A personal-finance assistant for hourly and tipped workers that forecasts variable income, projects paychecks, and estimates savings and tax set-aside from daily inputs — applying ML pattern recognition to user data. (Concept &amp; prototype.)</p>
       <div class="tags"><span class="tag">ML</span><span class="tag">Forecasting</span><span class="tag">Prototype</span></div>
-      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
     </div>
 
     <div class="card">
@@ -184,7 +201,106 @@
       <h4>AI Volunteer-Hours Management App</h4>
       <p>An AI-powered application to capture and manage volunteer hours across 25+ non-profit centers, automating tracking and reporting for thousands of volunteers.</p>
       <div class="tags"><span class="tag">AI</span><span class="tag">Automation</span><span class="tag">Non-profit</span></div>
-      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-tag">Certifications</div>
+    <h2>Verified AI, ML &amp; engineering credentials</h2>
+    <p>14 completed certifications — heavily focused on Generative AI, LLMs, and machine learning. Each links to its official verification page.</p>
+  </div>
+
+  <div class="cert-feature">
+    <div class="ic">🏅</div>
+    <div class="meta">
+      <div class="plat">Coursera · Specialization</div>
+      <h4>Generative AI Engineering with LLMs</h4>
+      <div class="sub">Multi-course specialization covering the full GenAI/LLM engineering stack.</div>
+    </div>
+    <a class="vbtn" href="https://www.coursera.org/account/accomplishments/specialization/D3ZNN08HJ9MU" target="_blank" rel="noopener">Verify ↗</a>
+  </div>
+
+  <div class="cert-grid">
+
+    <div class="cert">
+      <div class="plat">Credly · PMI</div>
+      <h5>Practical Application of Gen AI for Project Managers</h5>
+      <a class="verify" href="https://www.credly.com/badges/bd578242-f356-44e3-be76-f91f4ff34af6/linked_in_profile" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI Applications with RAG and LangChain</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/QL52D4I9XU7M" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Fundamentals of AI Agents Using RAG and LangChain</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/O2X8DYGWNPEY" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI Advanced Fine-Tuning for LLMs</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/V4W2T2KSCQ5B" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI Engineering and Fine-Tuning Transformers</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/L6N4BIF720ZZ" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI Language Modeling with Transformers</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/OGKBMCKILLAS" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Gen AI Foundational Models for NLP &amp; Language Understanding</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/Y9DQ7MD15TI9" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI and LLMs: Architecture and Data Preparation</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/M9NMN70IKISG" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Supervised Machine Learning: Regression and Classification</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/FLSJHQ1PRHK4" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Programming in Python</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/PVCY4WUJFSCP" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Introduction to Generative AI for Software Development</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/GLOBXT9XGHJJ" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>Generative AI for Everyone</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/EZ1IFZJBX9MQ" target="_blank" rel="noopener">Verify ↗</a>
+    </div>
+
+    <div class="cert">
+      <div class="plat">Coursera</div>
+      <h5>AI For Everyone</h5>
+      <a class="verify" href="https://www.coursera.org/account/accomplishments/verify/T1C22L8VUCEW" target="_blank" rel="noopener">Verify ↗</a>
     </div>
 
   </div>
@@ -220,7 +336,7 @@
         <h4>Bill Pay</h4>
         <p>Shipped Bill Pay, letting users pay and manage bills directly in the app — expanding PayPal into everyday money management for millions of users.</p>
         <div class="tags"><span class="tag">Payments</span><span class="tag">0→1</span><span class="tag">Consumer</span></div>
-        <a class="link" href="https://www.paypal.com/us/digital-wallet/manage-money/pay-bills" target="_blank" rel="noopener">See the feature →</a>
+        <a class="link muted">Live in the PayPal app</a>
       </div>
 
       <div class="card">
@@ -229,7 +345,7 @@
         <h4>Direct Deposit</h4>
         <p>Went live with Direct Deposit, enabling users to receive paychecks and government payments early into their PayPal balance — a core pillar of PayPal's banking push.</p>
         <div class="tags"><span class="tag">Banking</span><span class="tag">Funding</span><span class="tag">Growth</span></div>
-        <a class="link" href="https://www.paypal.com/us/digital-wallet/manage-money/direct-deposit" target="_blank" rel="noopener">See the feature →</a>
+        <a class="link muted">Live in the PayPal app</a>
       </div>
 
       <div class="card">
@@ -238,7 +354,7 @@
         <h4>P2P Enhancements</h4>
         <p>Shipped multiple enhancements to PayPal's peer-to-peer send/request flows, improving speed, reliability, and the everyday experience of moving money between people.</p>
         <div class="tags"><span class="tag">P2P</span><span class="tag">UX</span><span class="tag">Iteration</span></div>
-        <a class="link" href="https://www.paypal.com/us/digital-wallet/send-receive-money" target="_blank" rel="noopener">See the feature →</a>
+        <a class="link muted">Live in the PayPal app</a>
       </div>
 
       <div class="card">
@@ -247,7 +363,7 @@
         <h4>Meta &amp; Venmo Payments Integration</h4>
         <p>Led the Meta–PayPal/Venmo integration enabling PayPal and Venmo as payment options in Facebook Messenger, and delivered the Visa–PayPal/Venmo payments integration — coordinating 45+ teams and 125+ engineers.</p>
         <div class="tags"><span class="tag">Partnerships</span><span class="tag">45+ teams</span><span class="tag">Venmo</span></div>
-        <a class="link" href="https://www.venmo.com" target="_blank" rel="noopener">View Venmo →</a>
+        <a class="link muted">Shipped across PayPal, Venmo &amp; Messenger</a>
       </div>
 
       <div class="card">
@@ -273,7 +389,7 @@
         <h4>Lynda.com → LinkedIn Learning</h4>
         <p>Orchestrated the LinkedIn Learning integration post–Lynda.com acquisition, unifying systems and launching it across both consumer and enterprise markets to boost engagement and learning outcomes.</p>
         <div class="tags"><span class="tag">Platform</span><span class="tag">M&amp;A</span><span class="tag">B2B + B2C</span></div>
-        <a class="link" href="https://www.linkedin.com/learning/" target="_blank" rel="noopener">Visit LinkedIn Learning →</a>
+        <a class="link muted">Launched as LinkedIn Learning</a>
       </div>
 
       <div class="card">
@@ -370,7 +486,6 @@
     <a class="btn btn-primary" href="https://www.linkedin.com/in/rajeshbindu/" target="_blank" rel="noopener">Connect on LinkedIn</a>
   </div>
   <p class="fine">Rajesh Bindu · San Jose, CA · An addendum to my resume.</p>
-  <p class="editnote">Tip: add live links for the three AI projects above when ready.</p>
 </div></footer>
 
 </body>
