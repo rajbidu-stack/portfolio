@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajesh Bindu — Work & Projects</title>
+<meta name="description" content="Rajesh Bindu — Principal Technical Program Manager. Selected work across PayPal, LinkedIn, and Visa, plus personal AI projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0c14;--bg-2:#0f1320;--card:#141826;--card-2:#191e30;
+    --line:#252b40;--txt:#eef1f8;--muted:#9aa3bd;
+    --accent:#6d8bff;--accent-2:#a26bff;--accent-3:#36d6c3;--glow:rgba(109,139,255,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.brand{font-family:'Sora',sans-serif;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  .bg-orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px)}
+  .orb.a{width:520px;height:520px;background:var(--accent);top:-160px;left:-120px;opacity:.4}
+  .orb.b{width:480px;height:480px;background:var(--accent-2);top:280px;right:-160px;opacity:.32}
+  .orb.c{width:420px;height:420px;background:var(--accent-3);bottom:-180px;left:30%;opacity:.16}
+
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(10,12,20,.6);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:800;font-size:1.15rem}
+  .brand span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .navlinks{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+  .navlinks a:hover{color:var(--txt)}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  header.hero{position:relative;z-index:1;padding:90px 0 56px;text-align:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:var(--accent);background:rgba(109,139,255,.1);border:1px solid rgba(109,139,255,.3);padding:6px 14px;border-radius:999px;margin-bottom:22px}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent-3);box-shadow:0 0 10px var(--accent-3)}
+  h1{font-size:clamp(2.3rem,5.5vw,3.9rem);font-weight:800;line-height:1.06;margin-bottom:14px}
+  .title-line{font-size:clamp(1rem,2.2vw,1.25rem);color:var(--accent-3);font-weight:600;margin-bottom:18px;font-family:'Sora'}
+  h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2) 60%,var(--accent-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lede{max-width:680px;margin:0 auto 18px;color:var(--muted);font-size:1.08rem}
+  .pedigree{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
+  .pedigree span{font-size:.78rem;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;font-size:.95rem;transition:.25s;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 30px var(--glow)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 38px var(--glow)}
+  .btn-ghost{border-color:var(--line);color:var(--txt);background:var(--card)}
+  .btn-ghost:hover{border-color:var(--accent);transform:translateY(-2px)}
+
+  .stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:8px 0 36px}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
+  .stat .num{font-family:'Sora';font-weight:800;font-size:1.85rem;background:linear-gradient(90deg,var(--accent),var(--accent-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat .lbl{color:var(--muted);font-size:.82rem;margin-top:4px}
+
+  section{position:relative;z-index:1;padding:50px 0}
+  .sec-head{margin-bottom:14px}
+  .sec-tag{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .sec-head h2{font-size:clamp(1.7rem,4vw,2.3rem);margin:8px 0 10px}
+  .sec-head p{color:var(--muted);max-width:620px}
+
+  .co-group{margin-top:34px}
+  .co-label{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .co-label .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+  .co-label .dot.li{background:#36d6c3}
+  .co-label .dot.visa{background:#a26bff}
+  .co-label h3{font-size:1.2rem}
+  .co-label .years{color:var(--muted);font-size:.85rem;margin-left:auto}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{position:relative;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:24px;overflow:hidden;transition:.3s}
+  .card::before{content:"";position:absolute;inset:0;border-radius:20px;padding:1px;background:linear-gradient(135deg,var(--accent),transparent 45%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.3s}
+  .card:hover{transform:translateY(-5px);border-color:transparent}
+  .card:hover::before{opacity:1}
+  .card .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:rgba(109,139,255,.12);border:1px solid rgba(109,139,255,.25);margin-bottom:16px}
+  .card h4{font-family:'Sora';font-size:1.12rem;margin-bottom:6px;font-weight:700}
+  .card .role{font-size:.74rem;color:var(--accent-3);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+  .tag{font-size:.72rem;color:var(--muted);background:var(--bg-2);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+  .card .link{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;font-weight:600;color:var(--accent);transition:.2s}
+  .card .link:hover{gap:10px;color:var(--accent-2)}
+  .card .link.muted{color:var(--muted)}
+
+  .featured{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr}
+  @media(max-width:760px){.featured{grid-template-columns:1fr}}
+  .featured .body{padding:32px}
+  .featured .side{background:radial-gradient(circle at 30% 30%,rgba(162,107,255,.35),transparent 60%),var(--bg-2);display:flex;align-items:center;justify-content:center;padding:32px;font-family:'Sora';font-weight:800;font-size:2.1rem;text-align:center;border-left:1px solid var(--line)}
+  @media(max-width:760px){.featured .side{border-left:none;border-top:1px solid var(--line);font-size:1.5rem;padding:26px}}
+  .featured .side .em{background:linear-gradient(90deg,var(--accent),var(--accent-3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .badge-first{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0a0c14;background:var(--accent-3);padding:3px 10px;border-radius:6px;margin-bottom:14px}
+
+  .creds{position:relative;z-index:1}
+  .creds .grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+  @media(max-width:760px){.creds .grid2{grid-template-columns:1fr}}
+  .panel{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:28px}
+  .panel h4{font-family:'Sora';font-size:1.05rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .panel ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .panel li{color:var(--muted);font-size:.92rem;padding-left:20px;position:relative}
+  .panel li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .panel li b{color:var(--txt);font-weight:600}
+  .award{background:linear-gradient(135deg,rgba(109,139,255,.15),rgba(162,107,255,.1));border:1px solid rgba(109,139,255,.3);border-radius:16px;padding:18px;margin-top:18px;font-size:.9rem}
+  .award .t{font-family:'Sora';font-weight:700;color:var(--accent-3);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+
+  footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:48px 0;text-align:center;color:var(--muted)}
+  footer .cta{margin-bottom:20px}
+  footer h2{font-family:'Sora';font-size:1.8rem;margin-bottom:16px;color:var(--txt)}
+  footer .fine{font-size:.82rem}
+  .editnote{margin-top:14px;font-size:.74rem;color:#5b6480}
+</style>
+</head>
+<body>
+<div class="bg-orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+
+<nav><div class="wrap">
+  <div class="brand">Rajesh Bindu<span>.</span></div>
+  <div class="navlinks">
+    <a href="#ai">AI Projects</a>
+    <a href="#paypal">PayPal</a>
+    <a href="#linkedin">LinkedIn</a>
+    <a href="#visa">Visa</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Resume addendum · Selected work</div>
+  <h1>Rajesh Bindu</h1>
+  <div class="title-line">Senior Manager · Principal Technical Program Manager · PMO Leader</div>
+  <div class="pedigree">
+    <span>Ex-PayPal</span><span>Ex-LinkedIn</span><span>Ex-Visa</span><span>MBA · MS</span><span>Stanford — Program Management</span><span>PMP</span><span>Certified in Generative AI, LLMs &amp; ML</span>
+  </div>
+  <p class="lede">Hands-on <strong style="color:#eef1f8;font-weight:600">AI/ML builder</strong> — certified in Generative AI and LLMs, and the leader who shipped <strong style="color:#eef1f8;font-weight:600">PayPal's first AI/ML shopping experience</strong>. I lead <strong style="color:#eef1f8;font-weight:600">global programs with 100+ engineers</strong> across fintech, consumer, and SaaS, delivering products to millions while meeting worldwide risk, compliance, and privacy standards.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#paypal">View the work →</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/rajeshbindu/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+</div></header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="num">15+</div><div class="lbl">Years leading programs</div></div>
+    <div class="stat"><div class="num">3</div><div class="lbl">Industry leaders: PayPal · LinkedIn · Visa</div></div>
+    <div class="stat"><div class="num">1st</div><div class="lbl">AI/ML shopping experience at PayPal</div></div>
+    <div class="stat"><div class="num">250+</div><div class="lbl">Engineers partnered across launches</div></div>
+  </div>
+</div>
+
+<section id="ai"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-tag">AI &amp; Personal Projects</div>
+    <h2>Generative AI I've built myself</h2>
+    <p>Hands-on generative-AI applications — certified in Generative AI, LLMs, and Machine Learning with Python. Not just leading AI programs, but building them.</p>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="ic">💬</div>
+      <div class="role">Personal · LLM / RAG</div>
+      <h4>AskAnything — AI Q&amp;A Chatbot</h4>
+      <p>An LLM-powered question-answering assistant that responds to natural-language queries over a custom knowledge base using retrieval-augmented generation (RAG), prompt engineering, and vector search.</p>
+      <div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">Vector search</span><span class="tag">Python</span></div>
+      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
+    </div>
+
+    <div class="card">
+      <div class="ic">📊</div>
+      <div class="role">Personal · ML · Fintech</div>
+      <h4>AI Consumer-Finance Assistant</h4>
+      <p>A personal-finance assistant for hourly and tipped workers that forecasts variable income, projects paychecks, and estimates savings and tax set-aside from daily inputs — applying ML pattern recognition to user data. (Concept &amp; prototype.)</p>
+      <div class="tags"><span class="tag">ML</span><span class="tag">Forecasting</span><span class="tag">Prototype</span></div>
+      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
+    </div>
+
+    <div class="card">
+      <div class="ic">🙌</div>
+      <div class="role">Personal · AI · Non-profit</div>
+      <h4>AI Volunteer-Hours Management App</h4>
+      <p>An AI-powered application to capture and manage volunteer hours across 25+ non-profit centers, automating tracking and reporting for thousands of volunteers.</p>
+      <div class="tags"><span class="tag">AI</span><span class="tag">Automation</span><span class="tag">Non-profit</span></div>
+      <a class="link" href="#" target="_blank" rel="noopener">Add link →</a>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-tag">Live Products &amp; Launches</div>
+    <h2>Work I led to launch</h2>
+    <p>Real, shipped products across payments, money movement, identity, and learning — grouped by where they launched. Click through to the live experiences.</p>
+  </div>
+
+  <!-- PAYPAL -->
+  <div class="co-group" id="paypal">
+    <div class="co-label"><span class="dot"></span><h3>PayPal</h3><span class="years">Sr. Manager, TPM (PMO) · 2017 – 2025</span></div>
+    <div class="grid">
+
+      <div class="card featured">
+        <div class="body">
+          <span class="badge-first">Industry first</span>
+          <div class="role">PayPal · AI/ML</div>
+          <h4>PayPal's First AI/ML-Powered Shopping Experience</h4>
+          <p>Launched PayPal's first AI/ML-powered shopping experience in the consumer app — bringing ML-driven personalization, search optimization, and intelligent commerce to millions of shoppers across iOS, Android, and web.</p>
+          <div class="tags"><span class="tag">AI / ML</span><span class="tag">Personalization</span><span class="tag">0→1</span><span class="tag">Commerce</span></div>
+          <a class="link muted">Shipped in the PayPal consumer app</a>
+        </div>
+        <div class="side"><div><span class="em">AI/ML</span><br>Shopping</div></div>
+      </div>
+
+      <div class="card">
+        <div class="ic">🧾</div>
+        <div class="role">PayPal · Money movement</div>
+        <h4>Bill Pay</h4>
+        <p>Shipped Bill Pay, letting users pay and manage bills directly in the app — expanding PayPal into everyday money management for millions of users.</p>
+        <div class="tags"><span class="tag">Payments</span><span class="tag">0→1</span><span class="tag">Consumer</span></div>
+        <a class="link" href="https://www.paypal.com/us/digital-wallet/manage-money/pay-bills" target="_blank" rel="noopener">See the feature →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">💵</div>
+        <div class="role">PayPal · Money movement</div>
+        <h4>Direct Deposit</h4>
+        <p>Went live with Direct Deposit, enabling users to receive paychecks and government payments early into their PayPal balance — a core pillar of PayPal's banking push.</p>
+        <div class="tags"><span class="tag">Banking</span><span class="tag">Funding</span><span class="tag">Growth</span></div>
+        <a class="link" href="https://www.paypal.com/us/digital-wallet/manage-money/direct-deposit" target="_blank" rel="noopener">See the feature →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🔁</div>
+        <div class="role">PayPal · P2P</div>
+        <h4>P2P Enhancements</h4>
+        <p>Shipped multiple enhancements to PayPal's peer-to-peer send/request flows, improving speed, reliability, and the everyday experience of moving money between people.</p>
+        <div class="tags"><span class="tag">P2P</span><span class="tag">UX</span><span class="tag">Iteration</span></div>
+        <a class="link" href="https://www.paypal.com/us/digital-wallet/send-receive-money" target="_blank" rel="noopener">See the feature →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🤝</div>
+        <div class="role">PayPal · Meta · Visa</div>
+        <h4>Meta &amp; Venmo Payments Integration</h4>
+        <p>Led the Meta–PayPal/Venmo integration enabling PayPal and Venmo as payment options in Facebook Messenger, and delivered the Visa–PayPal/Venmo payments integration — coordinating 45+ teams and 125+ engineers.</p>
+        <div class="tags"><span class="tag">Partnerships</span><span class="tag">45+ teams</span><span class="tag">Venmo</span></div>
+        <a class="link" href="https://www.venmo.com" target="_blank" rel="noopener">View Venmo →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🔐</div>
+        <div class="role">PayPal · Identity &amp; compliance</div>
+        <h4>Identity — SCA, PSD2 &amp; GDPR</h4>
+        <p>Launched Strong Customer Authentication and EU data/privacy requirements for PayPal Identity, ensuring full PSD2 and GDPR compliance with privacy and protection as core principles.</p>
+        <div class="tags"><span class="tag">Compliance</span><span class="tag">PSD2</span><span class="tag">GDPR</span><span class="tag">Security</span></div>
+        <a class="link muted">Internal regulatory program</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LINKEDIN -->
+  <div class="co-group" id="linkedin">
+    <div class="co-label"><span class="dot li"></span><h3>LinkedIn</h3><span class="years">Staff Technical Program Manager · 2012 – 2016</span></div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="ic">🎓</div>
+        <div class="role">LinkedIn · B2C + Enterprise</div>
+        <h4>Lynda.com → LinkedIn Learning</h4>
+        <p>Orchestrated the LinkedIn Learning integration post–Lynda.com acquisition, unifying systems and launching it across both consumer and enterprise markets to boost engagement and learning outcomes.</p>
+        <div class="tags"><span class="tag">Platform</span><span class="tag">M&amp;A</span><span class="tag">B2B + B2C</span></div>
+        <a class="link" href="https://www.linkedin.com/learning/" target="_blank" rel="noopener">Visit LinkedIn Learning →</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🌐</div>
+        <div class="role">LinkedIn · Infrastructure</div>
+        <h4>First Two Global Data Centers</h4>
+        <p>Launched LinkedIn's first two global data centers from inception to production, establishing high-availability architectures and failover protocols that ensured uninterrupted global operations for hundreds of millions of users.</p>
+        <div class="tags"><span class="tag">Infra</span><span class="tag">Scale</span><span class="tag">High availability</span></div>
+        <a class="link muted">Foundational infrastructure program</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🚀</div>
+        <div class="role">LinkedIn · Strategy</div>
+        <h4>Learning-to-Employment Initiative</h4>
+        <p>Spearheaded the Learning-to-Employment initiative in direct collaboration with co-founder Allen Blue — presenting strategy to the executive team and creating a dedicated organization with government partnerships.</p>
+        <div class="tags"><span class="tag">0→1</span><span class="tag">Exec strategy</span><span class="tag">Gov partnerships</span></div>
+        <a class="link muted">Executive strategic initiative</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VISA -->
+  <div class="co-group" id="visa">
+    <div class="co-label"><span class="dot visa"></span><h3>Visa</h3><span class="years">Senior Project Manager · 2007 – 2011</span></div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="ic">🏛️</div>
+        <div class="role">Visa · Regulatory</div>
+        <h4>Durbin Law &amp; AML Programs</h4>
+        <p>Delivered high-impact regulatory and compliance programs, including Durbin Law and Anti-Money Laundering tool implementations, aligning legal, compliance, and technology stakeholders.</p>
+        <div class="tags"><span class="tag">Compliance</span><span class="tag">AML</span><span class="tag">Regulatory</span></div>
+        <a class="link muted">Enterprise compliance program</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">⚙️</div>
+        <div class="role">Visa · Infrastructure</div>
+        <h4>Global Transaction Network Scale</h4>
+        <p>Directed large-scale infrastructure and scalability efforts — procurement, capacity planning, and system resilience — to support Visa's global transaction network.</p>
+        <div class="tags"><span class="tag">Infra</span><span class="tag">Resilience</span><span class="tag">Capacity</span></div>
+        <a class="link muted">Mission-critical infrastructure</a>
+      </div>
+
+      <div class="card">
+        <div class="ic">🔗</div>
+        <div class="role">Visa · M&amp;A</div>
+        <h4>Processing Consolidation &amp; M&amp;A</h4>
+        <p>Orchestrated global integration initiatives such as Visa processing consolidation and M&amp;A platform transitions, ensuring operational continuity and strategic alignment.</p>
+        <div class="tags"><span class="tag">M&amp;A</span><span class="tag">Integration</span><span class="tag">Migration</span></div>
+        <a class="link muted">Global integration program</a>
+      </div>
+
+    </div>
+  </div>
+
+</div></section>
+
+<section class="creds"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-tag">Credentials</div>
+    <h2>Education, certifications &amp; recognition</h2>
+  </div>
+  <div class="grid2">
+    <div class="panel">
+      <h4>🎓 Education &amp; Certifications</h4>
+      <ul>
+        <li><b>MBA · MS</b></li>
+        <li><b>Program Management</b> — Stanford University</li>
+        <li><b>PMP</b> — Project Management Professional</li>
+        <li><b>Certified in Generative AI, LLMs &amp; Machine Learning</b> with Python</li>
+      </ul>
+      <div class="award">
+        <div class="t">Recognition</div>
+        Recipient of the <b>PayPal Critical Key Talent Award</b> — for high-impact consumer programs with direct CEO and executive visibility.
+      </div>
+    </div>
+    <div class="panel">
+      <h4>🤝 Volunteering</h4>
+      <ul>
+        <li><b>VP of Digital Media</b> — vtsworld.org (non-profit)</li>
+        <li>Manage website, technology selection, implementation, and donations across <b>25+ centers/directors</b> and thousands of volunteers.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <div class="sec-tag" style="margin-bottom:8px">Let's connect</div>
+  <h2>Want the full story?</h2>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/rajeshbindu/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+  <p class="fine">Rajesh Bindu · San Jose, CA · An addendum to my resume.</p>
+  <p class="editnote">Tip: add live links for the three AI projects above when ready.</p>
+</div></footer>
+
+</body>
+</html>
